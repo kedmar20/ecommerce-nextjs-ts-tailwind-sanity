@@ -12,11 +12,11 @@ function Header() {
       //       </div> */}
       // {/* </Link>
       // </div> */}
-      <div className="flex items-center justify-center space-x-2">
-         <a className="headerLink">Product</a>
-         <a className="headerLink">Explore</a>
-         <a className="headerLink">Support</a>
-         <a className="headerLink">Business</a>
+      <div className="flex space-x-2">
+         <a>Product</a>
+         <a>Explore</a>
+         <a>Support</a>
+         <a>Business</a>
       </div>
       // </header>
    );
