@@ -7,13 +7,12 @@ function Header() {
       <header>
          <div className=" flex items-center justify-center md:w-1/5 ">
             <Link href="/">
-               <div className="relative h-1 w-10 cursor-pointer opacity-75 transition hover:opacity-100">
-                  <Image src="/next.svg" width="100" height="10" alt="logo of nextjs" />
+               <div className="relative h-10 w-100 cursor-pointer opacity-75 transition hover:opacity-100 bg-amber-500">
+                  <Image src="/next.svg" width="200" height="5" alt="logo of nextjs" />
                </div>
             </Link>
          </div>
-         {/* <div className="hidden flex-1 items-center justify-center space-x-2 md:flex"> */}
-         <div className="hidden md:flex">
+         <div className="hidden flex-1 items-center justify-center space-x-8 md:flex">
             <a className="headerLink">Product</a>
             <a className="headerLink">Explore</a>
             <a className="headerLink">Support</a>
