@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,9 +18,15 @@
    }
 }
 
-body {
+/* body {
    color: rgb(var(--foreground-rgb));
    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+} */
+
+@layer base {
+   body {
+      @apply font-body text-[#3f0101];
+   }
 }
 
 @layer components {
