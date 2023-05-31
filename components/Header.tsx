@@ -11,16 +11,16 @@ function Header() {
       <header className="sticky top-0 z-30 flex w-full items-center justify-between bg-white p-10">
          <div className=" flex items-center justify-center md:w-1/5 ">
             <Link href="/">
-               <div className="relative h-150 w-300 cursor-pointer opacity-75 transition hover:opacity-100">
+               <div className="relative h-150 w-300 cursor-pointer opacity-100 transition hover:opacity-70">
                   <Image src={logoGustus} alt="logo of nextjs" width={120} />
                </div>
             </Link>
          </div>
          <div className="hidden flex-1 items-center justify-center space-x-8 md:flex">
-            <a className="headerLink">Frauenuhren</a>
-            <a className="headerLink">Herrenuhren</a>
-            <a className="headerLink">Smartwatch</a>
-            <a className="headerLink">Ausverkauf</a>
+            <a className="headerLink link-before">Frauenuhren</a>
+            <a className="headerLink link-before">Herrenuhren</a>
+            <a className="headerLink link-before">Smartwatch</a>
+            <a className="headerLink link-before">Ausverkauf</a>
          </div>
          <div className="flex items-center justify-center gap-x-4 md:w-1/5">
             <MagnifyingGlassIcon className="headerIcon" />
