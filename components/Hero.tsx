@@ -12,7 +12,7 @@ function Hero() {
             </h1>
             <span className="block bg-gradient-to-r from-[#aa0000] to-[#3F0101] bg-clip-text text-transparent">Erreichen Sie mehr mit uns</span>
             <div>
-               <Button title="Jetzt Shoppen" />
+               <Button title="Jetzt Shoppen" noIcon />
                {/* <a className="link link-before">Jetzt Shoppen</a> */}
             </div>
          </div>
