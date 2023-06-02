@@ -4,6 +4,8 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { Tab } from "@headlessui/react";
+import { fetchCategories } from "@/utils/fetchCategories";
+import { GetServerSideProps } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "300", subsets: ["latin"] });
@@ -59,3 +61,16 @@ export default function Home() {
       </>
    );
 }
+
+// Backend Code
+export const getServerSideProps: GetServerSideProps = async () => {
+   const categories = await fetchCategories();
+
+   return {
+      props: {
+         categories,
+         // products,
+         // session,
+      },
+   };
+};
