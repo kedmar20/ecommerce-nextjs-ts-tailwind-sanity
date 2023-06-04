@@ -10,7 +10,15 @@ import { GetServerSideProps } from "next";
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ weight: "300", subsets: ["latin"] });
 
-export default function Home() {
+interface Props {
+   categories: Category[];
+   // products: Product[];
+   // session: Session | null;
+}
+
+export default function Home({ categories }: Props) {
+   console.log(categories);
+
    return (
       <>
          <Head>
@@ -28,7 +36,7 @@ export default function Home() {
                <h1 className="text-center">SECTION 2</h1>
                <Tab.Group>
                   <Tab.List className="flex justify-center">
-                     {/* {categories.map((category) => (
+                     {categories.map((category) => (
                         <Tab
                            key={category._id}
                            id={category._id}
@@ -40,10 +48,10 @@ export default function Home() {
                         >
                            {category.title}
                         </Tab>
-                     ))} */}
-                     <Tab className="whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 borderGradient bg-[#35383C] text-white border-b-2 ">
+                     ))}
+                     {/* <Tab className="whitespace-nowrap rounded-t-lg py-3 px-5 text-sm font-light outline-none md:py-4 md:px-6 borderGradient bg-[#35383C] text-white border-b-2 ">
                         Category Title
-                     </Tab>
+                     </Tab> */}
                   </Tab.List>
                   <Tab.Panels className="mx-auto max-w-fit pt-10 pb-24 sm:px-4">
                      {/* <Tab.Panel className="tabPanel">{showProducts(0)}</Tab.Panel>
@@ -63,7 +71,7 @@ export default function Home() {
 }
 
 // Backend Code
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
    const categories = await fetchCategories();
 
    return {
